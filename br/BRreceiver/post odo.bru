@@ -1,0 +1,20 @@
+meta {
+  name: post odo
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8080/cars/odometers
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "VIN":"18cn4729dn4",
+    "owner_id":"wfnf823e",
+    "odometer":82300,
+    "time_stamp":"2025/01/08 10:34:09"
+  }
+}

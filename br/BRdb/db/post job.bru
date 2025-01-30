@@ -1,0 +1,21 @@
+meta {
+  name: post job
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8080/cars/jobs
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "job_id":"18cn73",
+    "bay_id": 3,
+    "VIN":"18cn4729dn4",
+    "description": "this is a description",
+    "time_stamp":"2025/01/08 10:34:09"
+  }
+}
