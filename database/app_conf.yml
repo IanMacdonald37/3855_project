@@ -1,0 +1,7 @@
+version: 1
+datastore:
+  user: Ian_admin
+  password: helpme
+  hostname: localhost
+  port: 3306
+  db: 3855_project

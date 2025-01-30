@@ -1,0 +1,118 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: lab
+  description: First lab test
+paths:
+  /db/create:
+    post:
+      summary: Set up tables
+      tags: []
+      responses:
+        '201':
+          description: Created
+        '400':
+          description: Bad Request
+      operationId: app.create_tables
+  /db/drop:
+    post:
+      summary: Drop tables
+      tags: []
+      responses:
+        '201':
+          description: Created
+        '400':
+          description: Bad Request
+      operationId: app.drop_tables
+  /cars/odometers:
+    post:
+      summary: Your POST endpoint
+      tags: []
+      responses:
+        '201':
+          description: Created
+        '400':
+          description: Bad Request
+      operationId: app.post_cars_odometers
+      requestBody:
+        description: Current odometer readings for a car
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OdometerReport'
+  /cars/jobs:
+    post:
+      summary: Your POST endpoint
+      tags: []
+      responses:
+        '201':
+          description: Created
+        '400':
+          description: Bad Request
+      operationId: app.post_cars_jobs
+      requestBody:
+        description: Service jobs completed for a specific car
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/JobCompletion'
+components:
+  schemas:
+    OdometerReport:
+      type: object
+      title: Odometer Report
+      required: 
+        - owner_id
+        - odometer
+        - VIN
+        - time_stamp
+        - trace_id
+      properties:
+        VIN:
+          type: string
+        owner_id:
+          type: string
+        odometer:
+          type: integer
+          x-stoplight:
+            id: d16ed74vidddq
+        time_stamp:
+          type: string
+          x-stoplight:
+            id: rhmtg7j6vxl2e
+        trace_id:
+          type: integer
+    JobCompletion:
+      title: Job Completion
+      type: object
+      required: 
+        - job_id
+        - bay_id
+        - VIN
+        - description
+        - time_stamp
+        - trace_id
+      properties:
+        job_id:
+          type: string
+        bay_id:
+          type: integer
+          x-stoplight:
+            id: vvt5znexj0xsl
+          format: int64
+        VIN:
+          type: string
+          x-stoplight:
+            id: 998l2byl3mvp0
+        description:
+          type: string
+          x-stoplight:
+            id: 3ve4d2nqa7bix
+        time_stamp:
+          type: string
+          x-stoplight:
+            id: gb8bm0qtifo67
+          format: date-time
+        trace_id:
+          type: integer
+          

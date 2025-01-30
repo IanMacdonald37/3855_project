@@ -1,0 +1,6 @@
+version: 1
+events:
+  odos:
+    url: http://localhost:8090/cars/odometers
+  jobs:
+    url: http://localhost:8090/cars/jobs
