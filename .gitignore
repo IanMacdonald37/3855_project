@@ -1,3 +1,8 @@
 /venv
 change-me-to-something-nice.db
 database.zip
+logs.json
+receiver/app.log
+database/app.log
+database/__pycache__
+receiver/__pycache__

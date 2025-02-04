@@ -1,10 +1,12 @@
 import logging.config
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from datetime import datetime
+from datetime import datetime as dt
 import uuid
 import yaml
 import logging
+import connexion
+from connexion import NoContent
 
 from models import JobCompletion, OdometerReport
 from utils import create_all_tables, drop_all_tables
@@ -21,11 +23,6 @@ logger = logging.getLogger('basicLogger')
 engine = create_engine(f"mysql://{CONFIG['datastore']['user']}:{CONFIG['datastore']['password']}@{CONFIG['datastore']['hostname']}/{CONFIG['datastore']['db']}")
 def make_session():
     return sessionmaker(bind=engine)()
-
-import connexion
-from connexion import NoContent
-
-DATE_FORMAT = "%Y-%m-%d %H:%M:%S"
 
 def gen_uuid():
     return uuid.uuid4().hex[:24]
@@ -55,7 +52,7 @@ def post_cars_odometers(body):
     else do nothing
     '''
     session = make_session()
-    body['time_stamp'] = datetime.strptime(body['time_stamp'], DATE_FORMAT)
+    body['time_stamp'] = dt.strptime(body['time_stamp'], CONFIG["date_format"])
     body['id'] = gen_uuid()
     odo = OdometerReport(**body)
     session.add(odo)
@@ -73,7 +70,7 @@ def post_cars_jobs(body):
     alert the owner 
     '''
     session = make_session()
-    body['time_stamp'] = datetime.strptime(body['time_stamp'], DATE_FORMAT)
+    body['time_stamp'] = dt.strptime(body['time_stamp'], CONFIG["date_format"])
     body['id'] = gen_uuid()
     job = JobCompletion(**body)
     session.add(job)
@@ -82,6 +79,22 @@ def post_cars_jobs(body):
     logger.debug(f"Stored event job with trace_id: {body['trace_id']}")
 
     return NoContent, 201
+
+def get_cars_odometers(body):
+    session = make_session()
+    
+    start = dt.fromtimestamp(body["start_timestamp"])
+    end = dt.fromtimestamp(body["end_timestamp"])
+    
+    statement = select(BloodPressure).where(BloodPressure.date_created >= start).where(BloodPressure.date_created < end)
+    
+    results = [
+    result.to_dict()
+    for result in session.execute(statement).scalars().all()
+    ]
+    session.close()
+    logger.info("Found %d blood pressure readings (start: %s, end: %s)", len(results), start, end)
+    return result
 
 
 app = connexion.FlaskApp(__name__, specification_dir='', strict_validation=True)

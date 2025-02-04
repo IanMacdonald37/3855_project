@@ -1,5 +1,5 @@
 from sqlalchemy.orm import DeclarativeBase, mapped_column
-from sqlalchemy import Integer, String, DateTime, func
+from sqlalchemy import Integer, String, DateTime, func, BigInteger
 import datetime
 
 class Base(DeclarativeBase):
@@ -13,7 +13,7 @@ class OdometerReport(Base):
     odometer = mapped_column(Integer, nullable=False)
     time_stamp = mapped_column(DateTime, nullable=False)
     date_created = mapped_column(DateTime, nullable=False, default=func.now())
-    trace_id = mapped_column(String(50), nullable=False)
+    trace_id = mapped_column(BigInteger, nullable=False)
 
 class JobCompletion(Base):
     __tablename__ = "job_completions"
@@ -24,4 +24,4 @@ class JobCompletion(Base):
     description = mapped_column(String(50), nullable=False)
     time_stamp = mapped_column(DateTime, nullable=False)
     date_created = mapped_column(DateTime, nullable=False, default=func.now())
-    trace_id = mapped_column(String(50), nullable=False)
+    trace_id = mapped_column(BigInteger, nullable=False)

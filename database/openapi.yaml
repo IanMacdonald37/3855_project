@@ -25,6 +25,33 @@ paths:
           description: Bad Request
       operationId: app.drop_tables
   /cars/odometers:
+    get:
+      operationId: app.get_cars_odometers
+      description: Gets odometer reports added after a timestamp
+      parameters:
+        - name: start_timestamp
+          in: query
+          description: Limits the number of readings returned
+          schema:
+            type: string
+            format: date-time
+            example: 2016-08-29T09:12:33.001Z
+        - name: end_timestamp
+          in: query
+          description: Limits the number of readings returned
+          schema:
+            type: string
+            format: date-time
+            example: 2016-08-29T09:12:33.001Z
+      responses:
+        '200':
+        description: Successfully returned a list of odos
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/OdometerReport'
     post:
       summary: Your POST endpoint
       tags: []
@@ -41,6 +68,33 @@ paths:
             schema:
               $ref: '#/components/schemas/OdometerReport'
   /cars/jobs:
+    get:
+      operationId: app.get_cars_jobs
+      description: Gets jobs added after a timestamp
+      parameters:
+        - name: start_timestamp
+          in: query
+          description: Limits the number of readings returned
+          schema:
+            type: string
+            format: date-time
+            example: 2016-08-29T09:12:33.001Z
+        - name: end_timestamp
+          in: query
+          description: Limits the number of readings returned
+          schema:
+            type: string
+            format: date-time
+            example: 2016-08-29T09:12:33.001Z
+      responses:
+        '200':
+        description: Successfully returned a list of jobs
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/OdometerReport'
     post:
       summary: Your POST endpoint
       tags: []
