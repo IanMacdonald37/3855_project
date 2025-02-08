@@ -45,13 +45,13 @@ paths:
             example: 2016-08-29T09:12:33.001Z
       responses:
         '200':
-        description: Successfully returned a list of odos
-        content:
-          application/json:
-            schema:
-              type: array
-              items:
-                $ref: '#/components/schemas/OdometerReport'
+          description: Successfully returned a list of odos
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/OdometerReport'
     post:
       summary: Your POST endpoint
       tags: []
@@ -88,13 +88,13 @@ paths:
             example: 2016-08-29T09:12:33.001Z
       responses:
         '200':
-        description: Successfully returned a list of jobs
-        content:
-          application/json:
-            schema:
-              type: array
-              items:
-                $ref: '#/components/schemas/OdometerReport'
+          description: Successfully returned a list of jobs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/JobCompletion'
     post:
       summary: Your POST endpoint
       tags: []
