@@ -4,4 +4,4 @@ urls:
   jobs: http://localhost:8090/cars/jobs
   odo: http://localhost:8090/cars/odometers
 scheduler:
-  interval: 10
+  interval: 60
