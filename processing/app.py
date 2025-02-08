@@ -6,6 +6,8 @@ import logging
 import json
 import httpx
 from apscheduler.schedulers.background import BackgroundScheduler
+from datetime import datetime, timezone
+
 
 with open('app_conf.yml', 'r') as f:
     CONFIG = yaml.safe_load(f.read())
@@ -19,28 +21,25 @@ logger = logging.getLogger('basicLogger')
 def populate_stats():
     logger.info("Periodic processing started")
 
-    # add a try block
     try:
-        with open(CONFIG["stats_file"], 'r') as file:
-            stats = json.load(file)
+        with open(CONFIG["stats_file"], 'r') as in_file:
+            stats = json.load(in_file)
     except:
         stats = {
             "num_odometer_readings": 0,
             "num_jobs_completed": 0,
             "max_odometer_reading": 0,
             "jobs_by_bay": [0,0,0,0,0,0],
-            "most_effiecent_bay": 0,
-            "last_updated": "2000-01-01 01:01:01"
+            "most_efficient_bay": 0,
+            "last_updated": "2000-01-01T01:01:01Z"
         }
-    
-    now = "now" #get date the same way the db does
+
+    now = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+
     headers = {"Content-Type" : "application/json"}
 
-    odo_results = httpx.get(f'{CONFIG["events"]["odo"]["url"]}?start_timestamp={stats["last_updated"]}&end_timestamp={now}', headers=headers)
-    job_resutls = httpx.get(f'{CONFIG["events"]["jobs"]["url"]}?start_timestamp={stats["last_updated"]}&end_timestamp={now}', headers=headers)
-
-    #temp
-    logger.debug(odo_results)
+    odo_results = httpx.get(f'{CONFIG["urls"]["odo"]}?start_timestamp={stats["last_updated"]}&end_timestamp={now}', headers=headers)
+    job_resutls = httpx.get(f'{CONFIG["urls"]["jobs"]}?start_timestamp={stats["last_updated"]}&end_timestamp={now}', headers=headers)
 
     failed_req = False
     if odo_results.status_code != 200:
@@ -56,11 +55,11 @@ def populate_stats():
     num_new_odometer_readings = len(odo_results.json())
     num_new_jobs_completed = len(job_resutls.json())
 
-    logger.info(f"new odometer readings received since last check:{num_new_odometer_readings}")
-    logger.info(f"new jobs completed since last check:{num_new_jobs_completed}")
+    logger.info(f"new odometer readings received since last check: {num_new_odometer_readings}")
+    logger.info(f"new jobs completed since last check: {num_new_jobs_completed}")
 
     #calc new stats
-    stats["num_odometer_reports"] += num_new_odometer_readings
+    stats["num_odometer_readings"] += num_new_odometer_readings
     stats["num_jobs_completed"] += num_new_jobs_completed
 
     for odo_reading in odo_results.json():
@@ -70,13 +69,15 @@ def populate_stats():
     for job in job_resutls.json():
         # Use the bay id (int) from the job details 
         # increment the number of jobs completed in that bay
-        stats["jobs_by_bay"][job["bay"]-1] += 1
+        stats["jobs_by_bay"][job["bay_id"]-1] += 1
 
-    stats["most_effecient_bay"] = stats["jobs_by_bay"].index(max(stats["jobs_by_bay"])) + 1
+    stats["most_efficient_bay"] = stats["jobs_by_bay"].index(max(stats["jobs_by_bay"])) + 1
 
-    stats["last_update"] = now
+    stats["last_updated"] = now
 
-    #write to file
+    with open(CONFIG["stats_file"], 'w') as out_file:
+        json.dump(stats, out_file, indent=4)
+
     logger.debug(stats)
 
     logger.info("periodic processing complete")

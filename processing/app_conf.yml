@@ -1,3 +1,7 @@
 version: 1
+stats_file: stats.json
+urls:
+  jobs: http://localhost:8090/cars/jobs
+  odo: http://localhost:8090/cars/odometers
 scheduler:
-  interval: 15
+  interval: 10

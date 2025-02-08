@@ -43,6 +43,7 @@ class JobCompletion(Base):
         dict['job_id'] = self.job_id
         dict['bay_id'] = self.bay_id
         dict['VIN'] = self.VIN
+        dict['description'] = self.description
         dict['time_stamp'] = self.time_stamp
         dict['date_created'] = self.date_created
         dict['trace_id'] = self.trace_id

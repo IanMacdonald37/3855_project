@@ -1,0 +1,15 @@
+{
+    "num_odometer_readings": 5,
+    "num_jobs_completed": 3,
+    "max_odometer_reading": 82300,
+    "jobs_by_bay": [
+        0,
+        0,
+        3,
+        0,
+        0,
+        0
+    ],
+    "most_efficient_bay": 3,
+    "last_updated": "2025-02-08T20:18:33Z"
+}
