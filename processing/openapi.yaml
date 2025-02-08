@@ -1,0 +1,46 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: lab
+  description: First lab test
+paths:
+  /stats:
+    get:
+      operationId: app.get_stats
+      description: Gets jobs added after a timestamp
+      responses:
+        '200':
+          description: Successfully returned a list of jobs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ReadingStats'
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+components:
+  schemas:
+    ReadingStats:
+      type: object
+      required: 
+        - num_odometer_readings
+        - num_jobs_completed
+        - max_odometer_reading
+        - most_effiecent_bay
+      properties:
+        num_odometer_readings:
+          type: integer
+        num_jobs_completed:
+          type: integer
+        max_odometer_reading:
+          type: integer
+        most_effiecent_bay:
+          type: integer
