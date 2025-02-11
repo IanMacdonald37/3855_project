@@ -1,0 +1,42 @@
+services:
+  db:
+    image: mysql
+    container_name: 3855_database
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: 28cjo$9*khgusj
+      MYSQL_USER: Ian_admin
+      MYSQL_PASSWORD: helpme
+      MYSQL_DATABASE: 3855_project
+    ports: 
+      - "3306:3306"
+    volumes:
+      - my-db:/var/lib/mysql
+
+  zookeeper:
+    image: wurstmeister/zookeeper
+    hostname: zookeeper
+    restart: unless-stopped
+  
+  kafka:
+    image: wurstmeister/kafka
+    command: [start-kafka.sh]
+    restart: unless-stopped
+    ports:
+      - "9092:9092"
+    hostname: kafka
+    environment:
+      KAFKA_CREATE_TOPICS: "events:1:1" # topic:partition:replicas
+      # KAFKA_ADVERTISED_HOST_NAME: localhost # docker-machine ip
+      KAFKA_LISTENERS: INSIDE://:29092,OUTSIDE://:9092
+      KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
+      KAFKA_ADVERTISED_LISTENERS: INSIDE://kafka:29092,OUTSIDE://localhost:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+      - "zookeeper"
+
+volumes:
+  my-db:
