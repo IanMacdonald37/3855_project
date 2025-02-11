@@ -176,3 +176,9 @@ WHERE odometer_reports.date_created >= :date_created_1 AND odometer_reports.date
 2025-02-08 12:18:35,977 - basicLogger - INFO - Found 0 odometer reports (start: 2025-02-08T20:18:23Z, end: 2025-02-08T20:18:33Z)
 2025-02-08 12:18:38,059 - basicLogger - INFO - Found 0 job completions (start: 2025-02-08T20:18:23Z, end: 2025-02-08T20:18:33Z)
 2025-02-08 12:18:38,059 - basicLogger - DEBUG - []
+2025-02-08 12:28:53,499 - basicLogger - DEBUG - Stored event job with trace_id: 1739046531372500300
+2025-02-08 12:28:59,670 - basicLogger - DEBUG - Stored event odometer with trace_id: 1739046537573464400
+2025-02-08 12:29:41,883 - basicLogger - INFO - Found 1 odometer reports (start: 2025-02-08T20:18:33Z, end: 2025-02-08T20:29:39Z)
+2025-02-08 12:29:43,956 - basicLogger - INFO - Found 1 job completions (start: 2025-02-08T20:18:33Z, end: 2025-02-08T20:29:39Z)
+2025-02-08 12:29:43,958 - basicLogger - DEBUG - [{'id': 'b037dcbffe5044039a787eb0', 'job_id': '18cn73', 'bay_id': 3, 'VIN': '18cn4729dn4', 'description': 'this is a description', 'time_stamp': datetime.datetime(2025, 1, 8, 10, 34, 9), 'date_created': datetime.datetime(2025, 2, 8, 20, 28, 53), 'trace_id': 1739046531372500300}]
+2025-02-08 12:29:48,627 - basicLogger - DEBUG - Stored event odometer with trace_id: 1739046586559322200

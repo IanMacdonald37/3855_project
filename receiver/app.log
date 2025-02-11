@@ -258,3 +258,15 @@
 2025-02-04 22:28:29,678 - basicLogger - INFO - Response for event job (id: 1738736907504148400) has status 201
 2025-02-04 22:28:33,896 - basicLogger - INFO - Received event odometer with a trace id of 1738736913896482600
 2025-02-04 22:28:35,986 - basicLogger - INFO - Response for event odometer (id: 1738736913896482600) has status 201
+2025-02-08 11:46:52,364 - basicLogger - INFO - Received event odometer with a trace id of 1739044012364908600
+2025-02-08 11:46:59,090 - basicLogger - INFO - Response for event odometer (id: 1739044012364908600) has status 500
+2025-02-08 11:53:07,439 - basicLogger - INFO - Received event odometer with a trace id of 1739044387439668300
+2025-02-08 11:53:09,663 - basicLogger - INFO - Response for event odometer (id: 1739044387439668300) has status 201
+2025-02-08 11:54:13,785 - basicLogger - INFO - Received event odometer with a trace id of 1739044453785817200
+2025-02-08 11:54:15,909 - basicLogger - INFO - Response for event odometer (id: 1739044453785817200) has status 201
+2025-02-08 12:28:51,372 - basicLogger - INFO - Received event job with a trace id of 1739046531372500300
+2025-02-08 12:28:53,508 - basicLogger - INFO - Response for event job (id: 1739046531372500300) has status 201
+2025-02-08 12:28:57,573 - basicLogger - INFO - Received event odometer with a trace id of 1739046537573464400
+2025-02-08 12:28:59,678 - basicLogger - INFO - Response for event odometer (id: 1739046537573464400) has status 201
+2025-02-08 12:29:46,559 - basicLogger - INFO - Received event odometer with a trace id of 1739046586559322200
+2025-02-08 12:29:48,635 - basicLogger - INFO - Response for event odometer (id: 1739046586559322200) has status 201
