@@ -52,21 +52,6 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/OdometerReport'
-    post:
-      summary: Your POST endpoint
-      tags: []
-      responses:
-        '201':
-          description: Created
-        '400':
-          description: Bad Request
-      operationId: app.post_cars_odometers
-      requestBody:
-        description: Current odometer readings for a car
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/OdometerReport'
   /cars/jobs:
     get:
       operationId: app.get_cars_jobs
@@ -95,21 +80,6 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/JobCompletion'
-    post:
-      summary: Your POST endpoint
-      tags: []
-      responses:
-        '201':
-          description: Created
-        '400':
-          description: Bad Request
-      operationId: app.post_cars_jobs
-      requestBody:
-        description: Service jobs completed for a specific car
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/JobCompletion'
 components:
   schemas:
     OdometerReport:

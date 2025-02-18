@@ -6,3 +6,7 @@ datastore:
   port: 3306
   db: 3855_project
 date_format: "%Y-%m-%d %H:%M:%S"
+events:
+  hostname: localhost
+  port: 9092
+  topic: events

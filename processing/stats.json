@@ -1,15 +1,15 @@
 {
-    "num_odometer_readings": 6,
-    "num_jobs_completed": 4,
-    "max_odometer_reading": 82300,
+    "num_odometer_readings": 120,
+    "num_jobs_completed": 121,
+    "max_odometer_reading": 99530,
     "jobs_by_bay": [
-        0,
-        0,
-        4,
-        0,
-        0,
-        0
+        17,
+        20,
+        27,
+        20,
+        19,
+        18
     ],
     "most_efficient_bay": 3,
-    "last_updated": "2025-02-08T20:29:39Z"
+    "last_updated": "2025-02-18T00:48:36Z"
 }

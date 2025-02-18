@@ -4,3 +4,6 @@ events:
     url: http://localhost:8090/cars/odometers
   jobs:
     url: http://localhost:8090/cars/jobs
+  hostname: localhost
+  port: 9092
+  topic: events
