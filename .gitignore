@@ -2,9 +2,10 @@
 change-me-to-something-nice.db
 database.zip
 logs.json
+/processing/stats.json
 /receiver/app.log
 /database/app.log
-processing/app.log
+/processing/app.log
 /database/__pycache__
 /receiver/__pycache__
 /processing/__pycache__
