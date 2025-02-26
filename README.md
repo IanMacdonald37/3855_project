@@ -73,7 +73,7 @@ if __name__ == "__main__":
 ```
 
 ## example openapi.yml
-'''yml
+```yml
 openapi: 3.0.0
 info:
   version: 1.0.0
@@ -165,4 +165,4 @@ components:
           x-stoplight:
             id: gb8bm0qtifo67
           format: date-time          
-'''
+```
