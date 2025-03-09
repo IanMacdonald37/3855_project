@@ -1,0 +1,130 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: lab
+  description: First lab test
+paths:
+  /odometer:
+    get:
+      operationId: app.get_odometer
+      description: Gets odometer reports added after a timestamp
+      parameters:
+        - name: index
+          in: query
+          schema:
+            type: integer
+            example: 5
+      responses:
+        '200':
+          description: Successfully returned the requested message
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  $ref: '#/components/schemas/OdometerReport'
+        '404':
+          description: 'DNE'
+  /job:
+    get:
+      operationId: app.get_job
+      description: Gets odometer reports added after a timestamp
+      parameters:
+        - name: index
+          in: query
+          schema:
+            type: integer
+            example: 5
+      responses:
+        '200':
+          description: Successfully returned the requested message
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  $ref: '#/components/schemas/JobCompletion'
+        '404':
+          description: 'DNE'
+  /stats:
+    get:
+      operationId: app.get_job
+      description: Gets odometer reports added after a timestamp
+      responses:
+        '200':
+          description: Successfully returned current stats
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  $ref: '#/components/schemas/Stats'
+components:
+  schemas:
+    OdometerReport:
+      type: object
+      title: Odometer Report
+      required: 
+        - owner_id
+        - odometer
+        - VIN
+        - time_stamp
+        - trace_id
+      properties:
+        VIN:
+          type: string
+        owner_id:
+          type: string
+        odometer:
+          type: integer
+          x-stoplight:
+            id: d16ed74vidddq
+        time_stamp:
+          type: string
+          x-stoplight:
+            id: rhmtg7j6vxl2e
+        trace_id:
+          type: integer
+    JobCompletion:
+      title: Job Completion
+      type: object
+      required: 
+        - job_id
+        - bay_id
+        - VIN
+        - description
+        - time_stamp
+        - trace_id
+      properties:
+        job_id:
+          type: string
+        bay_id:
+          type: integer
+          x-stoplight:
+            id: vvt5znexj0xsl
+          format: int64
+        VIN:
+          type: string
+          x-stoplight:
+            id: 998l2byl3mvp0
+        description:
+          type: string
+          x-stoplight:
+            id: 3ve4d2nqa7bix
+        time_stamp:
+          type: string
+          x-stoplight:
+            id: gb8bm0qtifo67
+          format: date-time
+        trace_id:
+          type: integer
+    Stats:
+      type: object
+      required: 
+        - num_odometers
+        - num_jobs
+      properties:
+        num_odometers:
+          type: integer
+        num_jobs:
+          type: integer
