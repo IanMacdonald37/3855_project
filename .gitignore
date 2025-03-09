@@ -9,3 +9,4 @@ logs.json
 /database/__pycache__
 /receiver/__pycache__
 /processing/__pycache__
+README.pdf
