@@ -18,8 +18,8 @@ with open('log_conf.yml', 'r') as f:
 
 logger = logging.getLogger('basicLogger')
 
-client = KafkaClient(hosts=f"{CONFIG['events']['hostname']}:{CONFIG['events']['port']}")
-topic = client.topics[str.encode(CONFIG['events']['topic'])]
+client = KafkaClient(hosts=f"{CONFIG['kafka']['hostname']}:{CONFIG['kafka']['port']}")
+topic = client.topics[str.encode(CONFIG['kafka']['topic'])]
 producer = topic.get_sync_producer()
 
 def gen_uuid():
@@ -66,4 +66,4 @@ app = connexion.FlaskApp(__name__, specification_dir='', strict_validation=True)
 app.add_api("openapi.yaml", strict_validation=True, validate_responses=True)
 
 if __name__ == "__main__":
-    app.run(port=8080)
+    app.run(port=8080, host="0.0.0.0")

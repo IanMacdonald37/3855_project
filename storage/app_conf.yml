@@ -2,11 +2,11 @@ version: 1
 datastore:
   user: Ian_admin
   password: helpme
-  hostname: localhost
+  hostname: db
   port: 3306
   db: 3855_project
 date_format: "%Y-%m-%d %H:%M:%S"
-events:
-  hostname: localhost
+kafka:
+  hostname: kafka
   port: 9092
   topic: events

@@ -1,4 +1,28 @@
 services:
+  receiver:
+    build:
+      context: receiver
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+  storage:
+    build:
+      context: storage
+      dockerfile: Dockerfile
+    ports:
+      - "8090:8090"
+  processing:
+    build:
+      context: processing
+      dockerfile: Dockerfile
+    ports:
+      - "8100:8100"
+  processing:
+    build:
+      context: processing
+      dockerfile: Dockerfile
+    ports:
+      - "8120:8120"
   db:
     image: mysql
     container_name: 3855_database

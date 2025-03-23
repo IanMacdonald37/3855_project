@@ -1,9 +1,10 @@
 version: 1
 events:
   odos:
-    url: http://localhost:8090/cars/odometers
+    url: http://storage:8090/cars/odometers
   jobs:
-    url: http://localhost:8090/cars/jobs
-  hostname: localhost
+    url: http://storage:8090/cars/jobs
+kafka:
+  hostname: kafka
   port: 9092
   topic: events

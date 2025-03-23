@@ -28,8 +28,8 @@ def setup_kafka_thread():
     t1.start()
 
 def process_messages():
-    client = KafkaClient(hosts=f"{CONFIG['events']['hostname']}:{CONFIG['events']['port']}")
-    topic = client.topics[str.encode(CONFIG['events']['topic'])]
+    client = KafkaClient(hosts=f"{CONFIG['kafka']['hostname']}:{CONFIG['kafka']['port']}")
+    topic = client.topics[str.encode(CONFIG['kafka']['topic'])]
     # Create a consume on a consumer group, that only reads new messages
     # (uncommitted messages) when the service re-starts (i.e., it doesn't
     # read all the old messages from the history in the message queue).
@@ -97,4 +97,4 @@ app.add_api("openapi.yaml", strict_validation=True, validate_responses=True)
 
 if __name__ == "__main__":
     setup_kafka_thread()
-    app.run(port=8090)
+    app.run(port=8090, host="0.0.0.0")
