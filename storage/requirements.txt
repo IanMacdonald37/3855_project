@@ -1,4 +1,5 @@
 connexion[flask,uvicorn,swagger-ui]
+setuptools
 pykafka
 sqlalchemy
 mysqlclient

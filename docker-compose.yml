@@ -3,24 +3,35 @@ services:
     build:
       context: receiver
       dockerfile: Dockerfile
+    depends_on:
+      - "storage"
+      - "kafka"
     ports:
       - "8080:8080"
   storage:
     build:
       context: storage
       dockerfile: Dockerfile
+    depends_on:
+      - "db"
     ports:
       - "8090:8090"
   processing:
     build:
       context: processing
       dockerfile: Dockerfile
+    depends_on:
+      - "storage"
     ports:
       - "8100:8100"
-  processing:
+  analyzer:
     build:
-      context: processing
+      context: analyzer
       dockerfile: Dockerfile
+    depends_on:
+      - "kafka"
+      - "receiver"
+      - "storage"
     ports:
       - "8120:8120"
   db:
