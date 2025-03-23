@@ -7,4 +7,4 @@ events:
 kafka:
   hostname: kafka
   port: 9092
-  topic: events
+  topic: "events"
