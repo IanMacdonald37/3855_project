@@ -16,8 +16,10 @@ logger = logging.getLogger('basicLogger')
 
 def get_index(type, index):
     client = KafkaClient(hosts=f"{CONFIG['kafka']['hostname']}:{CONFIG['kafka']['port']}")
-    topic = client.topics[CONFIG["kafka"]["topic"].encode()]
-    consumer = topic.get_simple_consumer(reset_offset_on_start=True, consumer_timeout_ms=1000)
+    topic = client.topics[str.encode(CONFIG['kafka']['topic'])]
+    consumer = topic.get_simple_consumer(
+        reset_offset_on_start=True, consumer_timeout_ms=1000
+    )
     counter = 0
     for msg in consumer:
         message = msg.value.decode("utf-8")
@@ -36,11 +38,16 @@ def get_job(index):
     return get_index("job_completion", index)
 
 def get_stats():
-    client = KafkaClient(hosts=CONFIG["kafka"]["hostname"])
-    topic = client.topics[CONFIG["kafka"]["topic"].encode()]
-    consumer = topic.get_simple_consumer(reset_offset_on_start=True, consumer_timeout_ms=1000)
+    client = KafkaClient(hosts=f"{CONFIG['kafka']['hostname']}:{CONFIG['kafka']['port']}")
+    topic = client.topics[str.encode(CONFIG['kafka']['topic'])]
+    consumer = topic.get_simple_consumer(
+        reset_offset_on_start=True, consumer_timeout_ms=1000
+    )
     odo_count = 0
     job_count = 0
+    if consumer is None:
+        logger.error("Kafka consumer is None. Check if the topic exists.")
+        return {"message": "Kafka topic is empty or unreachable"}, 500
     for msg in consumer:
         message = msg.value.decode("utf-8")
         data = json.loads(message)

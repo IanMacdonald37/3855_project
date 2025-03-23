@@ -6,7 +6,7 @@ info:
 paths:
   /odometer:
     get:
-      operationId: app.get_odometer
+      operationId: app.get_odo
       description: Gets odometer reports added after a timestamp
       parameters:
         - name: index
@@ -48,7 +48,7 @@ paths:
           description: 'DNE'
   /stats:
     get:
-      operationId: app.get_job
+      operationId: app.get_stats
       description: Gets odometer reports added after a timestamp
       responses:
         '200':
