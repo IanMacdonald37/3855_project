@@ -1,7 +1,6 @@
 import logging.config
 import connexion
 from connexion import NoContent
-import httpx
 import time
 import yaml
 import logging
@@ -18,9 +17,18 @@ with open('log_conf.yml', 'r') as f:
 
 logger = logging.getLogger('basicLogger')
 
-client = KafkaClient(hosts=f"{CONFIG['kafka']['hostname']}:{CONFIG['kafka']['port']}")
-topic = client.topics[str.encode(CONFIG['kafka']['topic'])]
-producer = topic.get_sync_producer()
+for i in range(3):  # Retry for 9 seconds
+    try:
+        client = KafkaClient(hosts=f"kafka:29092")
+        topic = client.topics[str.encode(CONFIG['kafka']['topic'])]
+        producer = topic.get_sync_producer()
+        print("Connected to Kafka!")
+        break  # Exit loop if connection is successful
+    except Exception as e:
+        print(f"Kafka connection failed: {e}, retrying...")
+        time.sleep(3)
+else:
+    raise Exception("Failed to connect to Kafka after multiple attempts")
 
 def gen_uuid():
     return time.time_ns()

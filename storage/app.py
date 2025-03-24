@@ -5,6 +5,7 @@ import yaml
 import logging
 import connexion
 import json
+import time
 from threading import Thread
 from connexion import NoContent
 from pykafka import KafkaClient
@@ -28,14 +29,20 @@ def setup_kafka_thread():
     t1.start()
 
 def process_messages():
-    client = KafkaClient(hosts=f"{CONFIG['kafka']['hostname']}:{CONFIG['kafka']['port']}")
-    topic = client.topics[str.encode(CONFIG['kafka']['topic'])]
-    # Create a consume on a consumer group, that only reads new messages
-    # (uncommitted messages) when the service re-starts (i.e., it doesn't
-    # read all the old messages from the history in the message queue).
-    consumer = topic.get_simple_consumer(consumer_group=b'event_group',
-        reset_offset_on_start=False,
-        auto_offset_reset=OffsetType.LATEST)
+    for i in range(3):  # Retry for 9 seconds
+        try:
+            client = KafkaClient(hosts=f"kafka:29092")
+            topic = client.topics[str.encode(CONFIG['kafka']['topic'])]
+            consumer = topic.get_simple_consumer(consumer_group=b'event_group',
+                reset_offset_on_start=False,
+                auto_offset_reset=OffsetType.LATEST)
+            print("Connected to Kafka!")
+            break  # Exit loop if connection is successful
+        except Exception as e:
+            print(f"Kafka connection failed: {e}, retrying...")
+            time.sleep(3)
+    else:
+        raise Exception("Failed to connect to Kafka after multiple attempts")    
     
     # This is blocking - it will wait for a new message
     for msg in consumer:
