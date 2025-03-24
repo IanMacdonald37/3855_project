@@ -1,39 +1,51 @@
 services:
   receiver:
     build:
-      context: .
-      dockerfile: receiver/Dockerfile
+      context: receiver
+      dockerfile: Dockerfile
     environment:
       LOG_FILE_NAME: receiver.log
+    volumes:
+      - ./config:/config
+      - ./logs/receiver.log:/app/receiver.log
     depends_on:
       - kafka
     ports:
       - "8080:8080"
   storage:
     build:
-      context: .
-      dockerfile: storage/Dockerfile
+      context: storage
+      dockerfile: Dockerfile
     environment:
       LOG_FILE_NAME: storage.log
+    volumes:
+      - ./config:/config
+      - ./logs/storage.log:/app/storage.log
     depends_on:
       - kafka
       - db
   processing:
     build:
-      context: .
-      dockerfile: processing/Dockerfile
+      context: processing
+      dockerfile: Dockerfile
     environment:
       LOG_FILE_NAME: processing.log
+    volumes:
+      - ./config:/config
+      - ./logs/processing.log:/app/processing.log
     depends_on:
       - storage
     ports:
       - "8100:8100"
   analyzer:
     build:
-      context: .
-      dockerfile: analyzer/Dockerfile
+      context: analyzer
+      dockerfile: Dockerfile
     environment:
       LOG_FILE_NAME: analyzer.log
+    volumes:
+      - ./config:/config
+      - ./logs/analyzer.log:/app/analyzer.log
     depends_on:
       - kafka
     ports:
@@ -54,6 +66,9 @@ services:
     image: wurstmeister/zookeeper
     hostname: zookeeper
     restart: unless-stopped
+    volumes:
+      - zoo-data:/data
+      - zoo-logs:/datalog  
   
   kafka:
     image: wurstmeister/kafka
@@ -70,9 +85,14 @@ services:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_BROKER_ID: 1
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+      - kafka-data:/kafka
+      - kafka-logs:/var/log/kafka
     depends_on:
       - "zookeeper"
 
 volumes:
   my-db:
+  zoo-data:
+  zoo-logs:
+  kafka-data:
+  kafka-logs:
