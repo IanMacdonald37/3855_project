@@ -4,10 +4,8 @@ from sqlalchemy.orm import sessionmaker
 import yaml
 from datetime import datetime as dt
 
-from models import JobCompletion, OdometerReport
 
-
-with open('app_conf.yml', 'r') as f:
+with open('/config/storage_conf.yml', 'r') as f:
     CONFIG = yaml.safe_load(f.read())
 
 engine = create_engine(f"mysql://{CONFIG['datastore']['user']}:{CONFIG['datastore']['password']}@{CONFIG['datastore']['hostname']}/{CONFIG['datastore']['db']}")

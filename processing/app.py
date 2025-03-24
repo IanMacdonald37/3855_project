@@ -9,11 +9,12 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from datetime import datetime, timezone
 
 
-with open('../config/processing_conf.yml', 'r') as f:
+with open('/config/processing_conf.yml', 'r') as f:
     CONFIG = yaml.safe_load(f.read())
 
-with open('../config/log_conf.yml', 'r') as f:
+with open('/config/log_conf.yml', 'r') as f:
     LOG_CONFIG = yaml.safe_load(f.read())
+    LOG_CONFIG['handlers']['file']['filename'] = CONFIG['log_file_name']
     logging.config.dictConfig(LOG_CONFIG)
 
 logger = logging.getLogger('basicLogger')

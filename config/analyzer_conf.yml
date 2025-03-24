@@ -3,3 +3,4 @@ kafka:
   hostname: "kafka"
   port: "29092"
   topic: "events"
+log_file_name: analyzer.log

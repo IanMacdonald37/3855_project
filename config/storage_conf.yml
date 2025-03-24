@@ -10,3 +10,4 @@ kafka:
   hostname: kafka
   port: 9092
   topic: "events"
+log_file_name: storage.log

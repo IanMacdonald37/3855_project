@@ -12,7 +12,6 @@ handlers:
     class: logging.FileHandler
     level: DEBUG
     formatter: simple
-    filename: ${LOG_FILE_NAME}
 loggers:
  basicLogger:
     level: DEBUG

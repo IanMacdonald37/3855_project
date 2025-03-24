@@ -1,0 +1,8 @@
+2025-03-24 20:31:24,524 - basicLogger - INFO - Received event job with a trace id of 1742848284524017811
+2025-03-24 20:31:24,565 - basicLogger - INFO - Event with trace_id:1742848284524017811 sucessfully added to que
+2025-03-24 20:31:37,620 - basicLogger - INFO - Received event job with a trace id of 1742848297620511340
+2025-03-24 20:31:37,627 - basicLogger - INFO - Event with trace_id:1742848297620511340 sucessfully added to que
+2025-03-24 20:31:37,814 - basicLogger - INFO - Received event job with a trace id of 1742848297814392331
+2025-03-24 20:31:37,823 - basicLogger - INFO - Event with trace_id:1742848297814392331 sucessfully added to que
+2025-03-24 20:31:42,675 - basicLogger - INFO - Received event odometer with a trace id of 1742848302675767294
+2025-03-24 20:31:42,681 - basicLogger - INFO - Event with trace_id:1742848302675767294 sucessfully added to que

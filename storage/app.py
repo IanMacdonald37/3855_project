@@ -14,11 +14,12 @@ from pykafka.common import OffsetType
 from models import JobCompletion, OdometerReport
 from utils import create_all_tables, drop_all_tables, create_record, query_records
 
-with open('../config/storage_conf.yml', 'r') as f:
+with open('/config/storage_conf.yml', 'r') as f:
     CONFIG = yaml.safe_load(f.read())
 
-with open('../config/log_conf.yml', 'r') as f:
+with open('/config/log_conf.yml', 'r') as f:
     LOG_CONFIG = yaml.safe_load(f.read())
+    LOG_CONFIG['handlers']['file']['filename'] = CONFIG['log_file_name']
     logging.config.dictConfig(LOG_CONFIG)
 
 logger = logging.getLogger('basicLogger')

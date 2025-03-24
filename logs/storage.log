@@ -1,0 +1,10 @@
+2025-03-24 20:31:24,576 - basicLogger - INFO - Message: {'type': 'job_completion', 'datetime': '2025-03-24T20:31:24', 'payload': {'job_id': '18cn73', 'bay_id': 3, 'VIN': '18cn4729dn4', 'description': 'this is a description', 'time_stamp': '2025-01-08 10:34:09', 'trace_id': 1742848284524017811}}
+2025-03-24 20:31:24,637 - basicLogger - DEBUG - Stored event job with trace_id: 1742848284524017811
+2025-03-24 20:31:32,705 - basicLogger - INFO - Found 70 odometer reports (start: 2025-03-23T04:52:34Z, end: 2025-03-24T20:31:32Z)
+2025-03-24 20:31:32,840 - basicLogger - INFO - Found 68 job completions (start: 2025-03-23T04:52:34Z, end: 2025-03-24T20:31:32Z)
+2025-03-24 20:31:37,629 - basicLogger - INFO - Message: {'type': 'job_completion', 'datetime': '2025-03-24T20:31:37', 'payload': {'job_id': '18cn73', 'bay_id': 3, 'VIN': '18cn4729dn4', 'description': 'this is a description', 'time_stamp': '2025-01-08 10:34:09', 'trace_id': 1742848297620511340}}
+2025-03-24 20:31:37,642 - basicLogger - DEBUG - Stored event job with trace_id: 1742848297620511340
+2025-03-24 20:31:37,824 - basicLogger - INFO - Message: {'type': 'job_completion', 'datetime': '2025-03-24T20:31:37', 'payload': {'job_id': '18cn73', 'bay_id': 3, 'VIN': '18cn4729dn4', 'description': 'this is a description', 'time_stamp': '2025-01-08 10:34:09', 'trace_id': 1742848297814392331}}
+2025-03-24 20:31:37,836 - basicLogger - DEBUG - Stored event job with trace_id: 1742848297814392331
+2025-03-24 20:31:42,682 - basicLogger - INFO - Message: {'type': 'odometer_report', 'datetime': '2025-03-24T20:31:42', 'payload': {'VIN': 'fjhug3v8vyu', 'owner_id': 'm7o8823e', 'odometer': 67900, 'time_stamp': '2025-02-17 10:34:09', 'trace_id': 1742848302675767294}}
+2025-03-24 20:31:42,697 - basicLogger - DEBUG - Stored event odometer with trace_id: 1742848302675767294

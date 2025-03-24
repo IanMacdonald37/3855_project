@@ -1,10 +1,8 @@
 services:
   receiver:
     build:
-      context: receiver
-      dockerfile: Dockerfile
-    environment:
-      LOG_FILE_NAME: receiver.log
+      context: .
+      dockerfile: receiver/Dockerfile
     volumes:
       - ./config:/config
       - ./logs/receiver.log:/app/receiver.log
@@ -14,10 +12,8 @@ services:
       - "8080:8080"
   storage:
     build:
-      context: storage
-      dockerfile: Dockerfile
-    environment:
-      LOG_FILE_NAME: storage.log
+      context: .
+      dockerfile: storage/Dockerfile
     volumes:
       - ./config:/config
       - ./logs/storage.log:/app/storage.log
@@ -26,10 +22,8 @@ services:
       - db
   processing:
     build:
-      context: processing
-      dockerfile: Dockerfile
-    environment:
-      LOG_FILE_NAME: processing.log
+      context: .
+      dockerfile: processing/Dockerfile
     volumes:
       - ./config:/config
       - ./logs/processing.log:/app/processing.log
@@ -39,10 +33,8 @@ services:
       - "8100:8100"
   analyzer:
     build:
-      context: analyzer
-      dockerfile: Dockerfile
-    environment:
-      LOG_FILE_NAME: analyzer.log
+      context: .
+      dockerfile: analyzer/Dockerfile
     volumes:
       - ./config:/config
       - ./logs/analyzer.log:/app/analyzer.log
@@ -66,13 +58,10 @@ services:
     image: wurstmeister/zookeeper
     hostname: zookeeper
     restart: unless-stopped
-    volumes:
-      - zoo-data:/data
-      - zoo-logs:/datalog  
-  
+
   kafka:
     image: wurstmeister/kafka
-    command: [start-kafka.sh]
+    command: [/opt/kafka/kafka-start-up.sh]
     restart: unless-stopped
     hostname: kafka
     environment:
@@ -85,8 +74,10 @@ services:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_BROKER_ID: 1
     volumes:
+      - ./scripts/kafka-start-up.sh:/opt/kafka/kafka-start-up.sh
       - kafka-data:/kafka
       - kafka-logs:/var/log/kafka
+      - /var/run/docker.sock:/var/run/docker.sock
     depends_on:
       - "zookeeper"
 

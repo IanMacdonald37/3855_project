@@ -5,3 +5,4 @@ urls:
   odo: http://storage:8090/cars/odometers
 scheduler:
   interval: 60
+log_file_name: processing.log
