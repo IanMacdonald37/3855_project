@@ -1,8 +1,8 @@
 services:
   receiver:
     build:
-      context: receiver
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: receiver/Dockerfile
     environment:
       LOG_FILE_NAME: receiver.log
     depends_on:
@@ -11,8 +11,8 @@ services:
       - "8080:8080"
   storage:
     build:
-      context: storage
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: storage/Dockerfile
     environment:
       LOG_FILE_NAME: storage.log
     depends_on:
@@ -20,8 +20,8 @@ services:
       - db
   processing:
     build:
-      context: processing
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: processing/Dockerfile
     environment:
       LOG_FILE_NAME: processing.log
     depends_on:
@@ -30,8 +30,8 @@ services:
       - "8100:8100"
   analyzer:
     build:
-      context: analyzer
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: analyzer/Dockerfile
     environment:
       LOG_FILE_NAME: analyzer.log
     depends_on:

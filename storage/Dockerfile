@@ -9,7 +9,8 @@ WORKDIR /app
 # Install dependencies
 RUN pip3 install -r requirements.txt
 # Copy the source code
-COPY . /app
+COPY ./storage/ /app
+COPY ./config/ /config
 # Change permissions and become a non-privileged user
 RUN chown -R nobody:nogroup /app
 USER nobody
