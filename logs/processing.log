@@ -3,3 +3,285 @@
 2025-03-24 20:31:32,860 - basicLogger - INFO - new jobs completed since last check: 68
 2025-03-24 20:31:32,862 - basicLogger - DEBUG - {'num_odometer_readings': 371, 'num_jobs_completed': 372, 'max_odometer_reading': 99608, 'jobs_by_bay': [47, 69, 76, 68, 58, 54], 'most_efficient_bay': 3, 'last_updated': '2025-03-24T20:31:32Z'}
 2025-03-24 20:31:32,862 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:11:17,754 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:11:18,335 - basicLogger - INFO - new odometer readings received since last check: 71
+2025-03-25 16:11:18,337 - basicLogger - INFO - new jobs completed since last check: 70
+2025-03-25 16:11:18,340 - basicLogger - DEBUG - {'num_odometer_readings': 372, 'num_jobs_completed': 374, 'max_odometer_reading': 99608, 'jobs_by_bay': [47, 69, 78, 68, 58, 54], 'most_efficient_bay': 3, 'last_updated': '2025-03-25T16:11:17Z'}
+2025-03-25 16:11:18,340 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:12:17,754 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:12:17,867 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 16:12:17,868 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 16:12:17,869 - basicLogger - DEBUG - {'num_odometer_readings': 372, 'num_jobs_completed': 374, 'max_odometer_reading': 99608, 'jobs_by_bay': [47, 69, 78, 68, 58, 54], 'most_efficient_bay': 3, 'last_updated': '2025-03-25T16:12:17Z'}
+2025-03-25 16:12:17,869 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:13:17,754 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:13:17,844 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 16:13:17,845 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 16:13:17,846 - basicLogger - DEBUG - {'num_odometer_readings': 372, 'num_jobs_completed': 374, 'max_odometer_reading': 99608, 'jobs_by_bay': [47, 69, 78, 68, 58, 54], 'most_efficient_bay': 3, 'last_updated': '2025-03-25T16:13:17Z'}
+2025-03-25 16:13:17,846 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:14:17,753 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:14:17,900 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 16:14:17,900 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 16:14:17,901 - basicLogger - DEBUG - {'num_odometer_readings': 372, 'num_jobs_completed': 374, 'max_odometer_reading': 99608, 'jobs_by_bay': [47, 69, 78, 68, 58, 54], 'most_efficient_bay': 3, 'last_updated': '2025-03-25T16:14:17Z'}
+2025-03-25 16:14:17,902 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:15:17,754 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:15:17,843 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 16:15:17,844 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 16:15:17,845 - basicLogger - DEBUG - {'num_odometer_readings': 372, 'num_jobs_completed': 374, 'max_odometer_reading': 99608, 'jobs_by_bay': [47, 69, 78, 68, 58, 54], 'most_efficient_bay': 3, 'last_updated': '2025-03-25T16:15:17Z'}
+2025-03-25 16:15:17,845 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:16:17,754 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:16:17,934 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 16:16:17,935 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 16:16:17,938 - basicLogger - DEBUG - {'num_odometer_readings': 372, 'num_jobs_completed': 374, 'max_odometer_reading': 99608, 'jobs_by_bay': [47, 69, 78, 68, 58, 54], 'most_efficient_bay': 3, 'last_updated': '2025-03-25T16:16:17Z'}
+2025-03-25 16:16:17,939 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:17:17,753 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:17:17,868 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 16:17:17,868 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 16:17:17,869 - basicLogger - DEBUG - {'num_odometer_readings': 372, 'num_jobs_completed': 374, 'max_odometer_reading': 99608, 'jobs_by_bay': [47, 69, 78, 68, 58, 54], 'most_efficient_bay': 3, 'last_updated': '2025-03-25T16:17:17Z'}
+2025-03-25 16:17:17,870 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:18:17,753 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:18:17,896 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 16:18:17,897 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 16:18:17,898 - basicLogger - DEBUG - {'num_odometer_readings': 372, 'num_jobs_completed': 374, 'max_odometer_reading': 99608, 'jobs_by_bay': [47, 69, 78, 68, 58, 54], 'most_efficient_bay': 3, 'last_updated': '2025-03-25T16:18:17Z'}
+2025-03-25 16:18:17,898 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:19:17,754 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:19:17,840 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 16:19:17,841 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 16:19:17,842 - basicLogger - DEBUG - {'num_odometer_readings': 372, 'num_jobs_completed': 374, 'max_odometer_reading': 99608, 'jobs_by_bay': [47, 69, 78, 68, 58, 54], 'most_efficient_bay': 3, 'last_updated': '2025-03-25T16:19:17Z'}
+2025-03-25 16:19:17,842 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:20:50,413 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:20:50,651 - basicLogger - ERROR - odo request failed
+
+<Response [500 Internal Server Error]>
+2025-03-25 16:20:50,652 - basicLogger - ERROR - job request failed
+
+<Response [500 Internal Server Error]>
+2025-03-25 16:21:50,419 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:21:50,543 - basicLogger - ERROR - odo request failed
+
+<Response [500 Internal Server Error]>
+2025-03-25 16:21:50,544 - basicLogger - ERROR - job request failed
+
+<Response [500 Internal Server Error]>
+2025-03-25 16:22:50,412 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:22:50,585 - basicLogger - ERROR - odo request failed
+
+<Response [500 Internal Server Error]>
+2025-03-25 16:22:50,586 - basicLogger - ERROR - job request failed
+
+<Response [500 Internal Server Error]>
+2025-03-25 16:23:50,412 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:23:50,534 - basicLogger - ERROR - odo request failed
+
+<Response [500 Internal Server Error]>
+2025-03-25 16:23:50,535 - basicLogger - ERROR - job request failed
+
+<Response [500 Internal Server Error]>
+2025-03-25 16:24:50,412 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:24:50,523 - basicLogger - ERROR - odo request failed
+
+<Response [500 Internal Server Error]>
+2025-03-25 16:24:50,523 - basicLogger - ERROR - job request failed
+
+<Response [500 Internal Server Error]>
+2025-03-25 16:25:50,413 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:25:50,539 - basicLogger - ERROR - odo request failed
+
+<Response [500 Internal Server Error]>
+2025-03-25 16:25:50,539 - basicLogger - ERROR - job request failed
+
+<Response [500 Internal Server Error]>
+2025-03-25 16:29:07,946 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:29:08,108 - basicLogger - ERROR - odo request failed
+
+<Response [500 Internal Server Error]>
+2025-03-25 16:29:08,109 - basicLogger - ERROR - job request failed
+
+<Response [500 Internal Server Error]>
+2025-03-25 16:30:07,946 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:30:08,138 - basicLogger - ERROR - odo request failed
+
+<Response [500 Internal Server Error]>
+2025-03-25 16:30:08,140 - basicLogger - ERROR - job request failed
+
+<Response [500 Internal Server Error]>
+2025-03-25 16:31:07,946 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:31:08,059 - basicLogger - ERROR - odo request failed
+
+<Response [500 Internal Server Error]>
+2025-03-25 16:31:08,060 - basicLogger - ERROR - job request failed
+
+<Response [500 Internal Server Error]>
+2025-03-25 16:32:07,945 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:32:08,085 - basicLogger - ERROR - odo request failed
+
+<Response [500 Internal Server Error]>
+2025-03-25 16:32:08,086 - basicLogger - ERROR - job request failed
+
+<Response [500 Internal Server Error]>
+2025-03-25 16:33:07,946 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:33:08,104 - basicLogger - ERROR - odo request failed
+
+<Response [500 Internal Server Error]>
+2025-03-25 16:33:08,104 - basicLogger - ERROR - job request failed
+
+<Response [500 Internal Server Error]>
+2025-03-25 16:34:07,945 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:34:08,083 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 16:34:08,083 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 16:34:08,087 - basicLogger - DEBUG - {'num_odometer_readings': 0, 'num_jobs_completed': 0, 'max_odometer_reading': 0, 'jobs_by_bay': [0, 0, 0, 0, 0, 0], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T16:34:07Z'}
+2025-03-25 16:34:08,088 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:35:07,945 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:35:08,130 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 16:35:08,131 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 16:35:08,134 - basicLogger - DEBUG - {'num_odometer_readings': 0, 'num_jobs_completed': 0, 'max_odometer_reading': 0, 'jobs_by_bay': [0, 0, 0, 0, 0, 0], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T16:35:07Z'}
+2025-03-25 16:35:08,135 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:36:07,945 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:36:08,107 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 16:36:08,107 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 16:36:08,111 - basicLogger - DEBUG - {'num_odometer_readings': 0, 'num_jobs_completed': 0, 'max_odometer_reading': 0, 'jobs_by_bay': [0, 0, 0, 0, 0, 0], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T16:36:07Z'}
+2025-03-25 16:36:08,112 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:37:07,946 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:37:08,074 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 16:37:08,074 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 16:37:08,079 - basicLogger - DEBUG - {'num_odometer_readings': 0, 'num_jobs_completed': 0, 'max_odometer_reading': 0, 'jobs_by_bay': [0, 0, 0, 0, 0, 0], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T16:37:07Z'}
+2025-03-25 16:37:08,079 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:38:07,946 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:38:08,085 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 16:38:08,086 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 16:38:08,090 - basicLogger - DEBUG - {'num_odometer_readings': 0, 'num_jobs_completed': 0, 'max_odometer_reading': 0, 'jobs_by_bay': [0, 0, 0, 0, 0, 0], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T16:38:07Z'}
+2025-03-25 16:38:08,090 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:39:07,946 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:39:08,067 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 16:39:08,067 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 16:39:08,072 - basicLogger - DEBUG - {'num_odometer_readings': 0, 'num_jobs_completed': 0, 'max_odometer_reading': 0, 'jobs_by_bay': [0, 0, 0, 0, 0, 0], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T16:39:07Z'}
+2025-03-25 16:39:08,073 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:41:29,460 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:41:29,825 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 16:41:29,826 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 16:41:29,830 - basicLogger - DEBUG - {'num_odometer_readings': 0, 'num_jobs_completed': 0, 'max_odometer_reading': 0, 'jobs_by_bay': [0, 0, 0, 0, 0, 0], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T16:41:29Z'}
+2025-03-25 16:41:29,831 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:42:29,460 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:42:29,623 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 16:42:29,625 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 16:42:29,630 - basicLogger - DEBUG - {'num_odometer_readings': 0, 'num_jobs_completed': 0, 'max_odometer_reading': 0, 'jobs_by_bay': [0, 0, 0, 0, 0, 0], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T16:42:29Z'}
+2025-03-25 16:42:29,630 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:44:22,471 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:44:22,676 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 16:44:22,677 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 16:44:22,681 - basicLogger - DEBUG - {'num_odometer_readings': 0, 'num_jobs_completed': 0, 'max_odometer_reading': 0, 'jobs_by_bay': [0, 0, 0, 0, 0, 0], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T16:44:22Z'}
+2025-03-25 16:44:22,681 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:45:22,470 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:45:22,584 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 16:45:22,585 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 16:45:22,589 - basicLogger - DEBUG - {'num_odometer_readings': 0, 'num_jobs_completed': 0, 'max_odometer_reading': 0, 'jobs_by_bay': [0, 0, 0, 0, 0, 0], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T16:45:22Z'}
+2025-03-25 16:45:22,590 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:46:22,471 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:46:22,586 - basicLogger - INFO - new odometer readings received since last check: 64
+2025-03-25 16:46:22,586 - basicLogger - INFO - new jobs completed since last check: 61
+2025-03-25 16:46:22,591 - basicLogger - DEBUG - {'num_odometer_readings': 64, 'num_jobs_completed': 61, 'max_odometer_reading': 96627, 'jobs_by_bay': [14, 10, 12, 9, 7, 9], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T16:46:22Z'}
+2025-03-25 16:46:22,592 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:47:22,470 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:47:22,559 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 16:47:22,559 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 16:47:22,564 - basicLogger - DEBUG - {'num_odometer_readings': 64, 'num_jobs_completed': 61, 'max_odometer_reading': 96627, 'jobs_by_bay': [14, 10, 12, 9, 7, 9], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T16:47:22Z'}
+2025-03-25 16:47:22,565 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:48:22,470 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:48:22,605 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 16:48:22,605 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 16:48:22,609 - basicLogger - DEBUG - {'num_odometer_readings': 64, 'num_jobs_completed': 61, 'max_odometer_reading': 96627, 'jobs_by_bay': [14, 10, 12, 9, 7, 9], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T16:48:22Z'}
+2025-03-25 16:48:22,610 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:49:22,472 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:49:22,565 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 16:49:22,565 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 16:49:22,570 - basicLogger - DEBUG - {'num_odometer_readings': 64, 'num_jobs_completed': 61, 'max_odometer_reading': 96627, 'jobs_by_bay': [14, 10, 12, 9, 7, 9], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T16:49:22Z'}
+2025-03-25 16:49:22,570 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:50:22,471 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:50:22,597 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 16:50:22,598 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 16:50:22,601 - basicLogger - DEBUG - {'num_odometer_readings': 64, 'num_jobs_completed': 61, 'max_odometer_reading': 96627, 'jobs_by_bay': [14, 10, 12, 9, 7, 9], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T16:50:22Z'}
+2025-03-25 16:50:22,602 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:51:22,470 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:51:22,558 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 16:51:22,558 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 16:51:22,563 - basicLogger - DEBUG - {'num_odometer_readings': 64, 'num_jobs_completed': 61, 'max_odometer_reading': 96627, 'jobs_by_bay': [14, 10, 12, 9, 7, 9], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T16:51:22Z'}
+2025-03-25 16:51:22,563 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:53:39,293 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:53:39,585 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 16:53:39,586 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 16:53:39,590 - basicLogger - DEBUG - {'num_odometer_readings': 64, 'num_jobs_completed': 61, 'max_odometer_reading': 96627, 'jobs_by_bay': [14, 10, 12, 9, 7, 9], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T16:53:39Z'}
+2025-03-25 16:53:39,591 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:54:39,293 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:54:39,394 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 16:54:39,394 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 16:54:39,399 - basicLogger - DEBUG - {'num_odometer_readings': 64, 'num_jobs_completed': 61, 'max_odometer_reading': 96627, 'jobs_by_bay': [14, 10, 12, 9, 7, 9], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T16:54:39Z'}
+2025-03-25 16:54:39,399 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:55:39,293 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:55:39,384 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 16:55:39,384 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 16:55:39,389 - basicLogger - DEBUG - {'num_odometer_readings': 64, 'num_jobs_completed': 61, 'max_odometer_reading': 96627, 'jobs_by_bay': [14, 10, 12, 9, 7, 9], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T16:55:39Z'}
+2025-03-25 16:55:39,390 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:56:39,295 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:56:39,447 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 16:56:39,448 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 16:56:39,454 - basicLogger - DEBUG - {'num_odometer_readings': 64, 'num_jobs_completed': 61, 'max_odometer_reading': 96627, 'jobs_by_bay': [14, 10, 12, 9, 7, 9], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T16:56:39Z'}
+2025-03-25 16:56:39,455 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:58:32,068 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:58:32,249 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 16:58:32,250 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 16:58:32,254 - basicLogger - DEBUG - {'num_odometer_readings': 64, 'num_jobs_completed': 61, 'max_odometer_reading': 96627, 'jobs_by_bay': [14, 10, 12, 9, 7, 9], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T16:58:32Z'}
+2025-03-25 16:58:32,255 - basicLogger - INFO - periodic processing complete
+2025-03-25 16:59:32,067 - basicLogger - INFO - Periodic processing started
+2025-03-25 16:59:32,157 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 16:59:32,158 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 16:59:32,162 - basicLogger - DEBUG - {'num_odometer_readings': 64, 'num_jobs_completed': 61, 'max_odometer_reading': 96627, 'jobs_by_bay': [14, 10, 12, 9, 7, 9], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T16:59:32Z'}
+2025-03-25 16:59:32,163 - basicLogger - INFO - periodic processing complete
+2025-03-25 17:00:32,068 - basicLogger - INFO - Periodic processing started
+2025-03-25 17:00:32,160 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 17:00:32,161 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 17:00:32,166 - basicLogger - DEBUG - {'num_odometer_readings': 64, 'num_jobs_completed': 61, 'max_odometer_reading': 96627, 'jobs_by_bay': [14, 10, 12, 9, 7, 9], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T17:00:32Z'}
+2025-03-25 17:00:32,167 - basicLogger - INFO - periodic processing complete
+2025-03-25 17:01:32,067 - basicLogger - INFO - Periodic processing started
+2025-03-25 17:01:32,154 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 17:01:32,154 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 17:01:32,159 - basicLogger - DEBUG - {'num_odometer_readings': 64, 'num_jobs_completed': 61, 'max_odometer_reading': 96627, 'jobs_by_bay': [14, 10, 12, 9, 7, 9], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T17:01:32Z'}
+2025-03-25 17:01:32,159 - basicLogger - INFO - periodic processing complete
+2025-03-25 17:02:32,067 - basicLogger - INFO - Periodic processing started
+2025-03-25 17:02:32,162 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 17:02:32,163 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 17:02:32,168 - basicLogger - DEBUG - {'num_odometer_readings': 64, 'num_jobs_completed': 61, 'max_odometer_reading': 96627, 'jobs_by_bay': [14, 10, 12, 9, 7, 9], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T17:02:32Z'}
+2025-03-25 17:02:32,168 - basicLogger - INFO - periodic processing complete
+2025-03-25 17:03:32,067 - basicLogger - INFO - Periodic processing started
+2025-03-25 17:03:32,163 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 17:03:32,164 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 17:03:32,168 - basicLogger - DEBUG - {'num_odometer_readings': 64, 'num_jobs_completed': 61, 'max_odometer_reading': 96627, 'jobs_by_bay': [14, 10, 12, 9, 7, 9], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T17:03:32Z'}
+2025-03-25 17:03:32,169 - basicLogger - INFO - periodic processing complete
+2025-03-25 17:04:32,067 - basicLogger - INFO - Periodic processing started
+2025-03-25 17:04:32,202 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 17:04:32,202 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 17:04:32,206 - basicLogger - DEBUG - {'num_odometer_readings': 64, 'num_jobs_completed': 61, 'max_odometer_reading': 96627, 'jobs_by_bay': [14, 10, 12, 9, 7, 9], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T17:04:32Z'}
+2025-03-25 17:04:32,207 - basicLogger - INFO - periodic processing complete
+2025-03-25 17:05:32,067 - basicLogger - INFO - Periodic processing started
+2025-03-25 17:05:32,287 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 17:05:32,287 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 17:05:32,292 - basicLogger - DEBUG - {'num_odometer_readings': 64, 'num_jobs_completed': 61, 'max_odometer_reading': 96627, 'jobs_by_bay': [14, 10, 12, 9, 7, 9], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T17:05:32Z'}
+2025-03-25 17:05:32,293 - basicLogger - INFO - periodic processing complete
+2025-03-25 17:06:32,066 - basicLogger - INFO - Periodic processing started
+2025-03-25 17:06:32,202 - basicLogger - INFO - new odometer readings received since last check: 2
+2025-03-25 17:06:32,203 - basicLogger - INFO - new jobs completed since last check: 2
+2025-03-25 17:06:32,207 - basicLogger - DEBUG - {'num_odometer_readings': 66, 'num_jobs_completed': 63, 'max_odometer_reading': 96627, 'jobs_by_bay': [14, 10, 14, 9, 7, 9], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T17:06:32Z'}
+2025-03-25 17:06:32,207 - basicLogger - INFO - periodic processing complete
+2025-03-25 17:10:01,477 - basicLogger - INFO - Periodic processing started
+2025-03-25 17:10:01,741 - basicLogger - INFO - new odometer readings received since last check: 1
+2025-03-25 17:10:01,741 - basicLogger - INFO - new jobs completed since last check: 1
+2025-03-25 17:10:01,747 - basicLogger - DEBUG - {'num_odometer_readings': 67, 'num_jobs_completed': 64, 'max_odometer_reading': 96627, 'jobs_by_bay': [14, 10, 15, 9, 7, 9], 'most_efficient_bay': 3, 'last_updated': '2025-03-25T17:10:01Z'}
+2025-03-25 17:10:01,748 - basicLogger - INFO - periodic processing complete
+2025-03-25 17:11:01,477 - basicLogger - INFO - Periodic processing started
+2025-03-25 17:11:01,579 - basicLogger - INFO - new odometer readings received since last check: 60
+2025-03-25 17:11:01,579 - basicLogger - INFO - new jobs completed since last check: 60
+2025-03-25 17:11:01,585 - basicLogger - DEBUG - {'num_odometer_readings': 127, 'num_jobs_completed': 124, 'max_odometer_reading': 98857, 'jobs_by_bay': [24, 19, 22, 20, 21, 18], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T17:11:01Z'}
+2025-03-25 17:11:01,585 - basicLogger - INFO - periodic processing complete
+2025-03-25 17:12:01,477 - basicLogger - INFO - Periodic processing started
+2025-03-25 17:12:01,562 - basicLogger - INFO - new odometer readings received since last check: 0
+2025-03-25 17:12:01,563 - basicLogger - INFO - new jobs completed since last check: 0
+2025-03-25 17:12:01,568 - basicLogger - DEBUG - {'num_odometer_readings': 127, 'num_jobs_completed': 124, 'max_odometer_reading': 98857, 'jobs_by_bay': [24, 19, 22, 20, 21, 18], 'most_efficient_bay': 1, 'last_updated': '2025-03-25T17:12:01Z'}
+2025-03-25 17:12:01,568 - basicLogger - INFO - periodic processing complete

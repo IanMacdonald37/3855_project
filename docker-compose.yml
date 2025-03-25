@@ -27,6 +27,7 @@ services:
     volumes:
       - ./config:/config
       - ./logs/processing.log:/app/processing.log
+      - ./data/processing/processing.json:/app/stats.json
     depends_on:
       - storage
     ports:
@@ -52,7 +53,7 @@ services:
       MYSQL_PASSWORD: helpme
       MYSQL_DATABASE: 3855_project
     volumes:
-      - my-db:/var/lib/mysql
+      - ./data/database:/var/lib/mysql
 
   zookeeper:
     image: wurstmeister/zookeeper
@@ -61,7 +62,7 @@ services:
 
   kafka:
     image: wurstmeister/kafka
-    command: [/opt/kafka/kafka-start-up.sh]
+    command: bash -c "rm -f /kafka/kafka-logs-kafka/meta.properties && start-kafka.sh"
     restart: unless-stopped
     hostname: kafka
     environment:
@@ -74,16 +75,12 @@ services:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_BROKER_ID: 1
     volumes:
-      - ./scripts/kafka-start-up.sh:/opt/kafka/kafka-start-up.sh
-      - kafka-data:/kafka
-      - kafka-logs:/var/log/kafka
+      - ./data/kafka/data:/kafka
+      - ./data/kafka/logs:/var/log/kafka
       - /var/run/docker.sock:/var/run/docker.sock
     depends_on:
       - "zookeeper"
 
 volumes:
-  my-db:
   zoo-data:
   zoo-logs:
-  kafka-data:
-  kafka-logs:
