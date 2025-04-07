@@ -48,7 +48,7 @@ services:
     container_name: 3855_database
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: 28cjo$9*khgusj
+      MYSQL_ROOT_PASSWORD: 28cjo$$9*khgusj
       MYSQL_USER: Ian_admin
       MYSQL_PASSWORD: helpme
       MYSQL_DATABASE: 3855_project
