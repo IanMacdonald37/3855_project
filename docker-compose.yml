@@ -4,7 +4,7 @@ services:
       context: .
       dockerfile: receiver/Dockerfile
     volumes:
-      - ./config:/config
+      - ./config/prod:/config
       - ./logs/receiver.log:/app/receiver.log
     depends_on:
       - kafka
@@ -15,7 +15,7 @@ services:
       context: .
       dockerfile: storage/Dockerfile
     volumes:
-      - ./config:/config
+      - ./config/prod:/config
       - ./logs/storage.log:/app/storage.log
     depends_on:
       - kafka
@@ -25,7 +25,7 @@ services:
       context: .
       dockerfile: processing/Dockerfile
     volumes:
-      - ./config:/config
+      - ./config/prod:/config
       - ./logs/processing.log:/app/processing.log
       - ./data/processing/processing.json:/app/stats.json
     depends_on:
@@ -37,7 +37,7 @@ services:
       context: .
       dockerfile: analyzer/Dockerfile
     volumes:
-      - ./config:/config
+      - ./config/prod:/config
       - ./logs/analyzer.log:/app/analyzer.log
     depends_on:
       - kafka
@@ -48,7 +48,7 @@ services:
     container_name: 3855_database
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: 28cjo$$9*khgusj
+      MYSQL_ROOT_PASSWORD: 28cjo9*khgusj
       MYSQL_USER: Ian_admin
       MYSQL_PASSWORD: helpme
       MYSQL_DATABASE: 3855_project

@@ -1,0 +1,11 @@
+version: 1
+events:
+  odos:
+    url: http://storage:8090/cars/odometers
+  jobs:
+    url: http://storage:8090/cars/jobs
+kafka:
+  hostname: kafka
+  port: 9092
+  topic: events
+log_file_name: receiver.log

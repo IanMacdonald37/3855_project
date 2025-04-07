@@ -1,0 +1,8 @@
+version: 1
+stats_file: stats.json
+urls:
+  jobs: http://storage:8090/cars/jobs
+  odo: http://storage:8090/cars/odometers
+scheduler:
+  interval: 10
+log_file_name: processing.log
