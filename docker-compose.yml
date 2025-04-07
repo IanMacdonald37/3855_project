@@ -48,10 +48,10 @@ services:
     container_name: 3855_database
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: 28cjo9*khgusj
-      MYSQL_USER: Ian_admin
-      MYSQL_PASSWORD: helpme
-      MYSQL_DATABASE: 3855_project
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
     volumes:
       - ./data/database:/var/lib/mysql
 
