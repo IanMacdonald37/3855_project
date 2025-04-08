@@ -1,4 +1,13 @@
 services:
+  dashboard:
+    build:
+      context: .
+      dockerfile: dashboard/Dockerfile
+    depends_on: 
+      - analyzer
+      - processing
+    ports:
+      - "80:80"
   receiver:
     build:
       context: .
