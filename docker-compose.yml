@@ -20,6 +20,8 @@ services:
     depends_on:
       - kafka
       - db
+    ports:
+      - "8090:8090"
   processing:
     build:
       context: .
