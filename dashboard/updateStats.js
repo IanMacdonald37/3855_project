@@ -1,8 +1,8 @@
 /* UPDATE THESE VALUES TO MATCH YOUR SETUP */
 
-const PROCESSING_STATS_API_URL = "http://imacdonald3855.centralus.cloudapp.azure.com:8100/stats"
+const PROCESSING_STATS_API_URL = "http://localhost:8100/stats"
 const ANALYZER_API_URL = {
-    stats: "http://imacdonald3855.centralus.cloudapp.azure.com:8120/stats",
+    stats: "http://localhost:8120/stats",
     // snow: "http://imacdonald3855.centralus.cloudapp.azure.com/event.json",
     // lift: "http://imacdonald3855.centralus.cloudapp.azure.com:8123/event.json"
 }
