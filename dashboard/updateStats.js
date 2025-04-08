@@ -3,8 +3,8 @@
 const PROCESSING_STATS_API_URL = "http://localhost:8100/stats"
 const ANALYZER_API_URL = {
     stats: "http://localhost:8120/stats",
-    snow: "http://localhost:8120/job",
-    lift: "http://localhost:8120/odometer"
+    job: "http://localhost:8120/job?index=5",
+    odometer: "http://localhost:8120/odometer?index=5"
 }
 
 // This function fetches and updates the general statistics
