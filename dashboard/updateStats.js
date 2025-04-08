@@ -28,8 +28,8 @@ const getStats = () => {
     
     makeReq(PROCESSING_STATS_API_URL, (result) => updateCodeDiv(result, "processing-stats"))
     makeReq(ANALYZER_API_URL.stats, (result) => updateCodeDiv(result, "analyzer-stats"))
-    makeReq(ANALYZER_API_URL.snow, (result) => updateCodeDiv(result, "event-snow"))
-    makeReq(ANALYZER_API_URL.lift, (result) => updateCodeDiv(result, "event-lift"))
+    makeReq(ANALYZER_API_URL.job, (result) => updateCodeDiv(result, "event-job"))
+    makeReq(ANALYZER_API_URL.odometer, (result) => updateCodeDiv(result, "event-odo"))
 }
 
 const updateErrorMessages = (message) => {
