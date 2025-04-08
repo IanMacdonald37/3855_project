@@ -1,10 +1,10 @@
 /* UPDATE THESE VALUES TO MATCH YOUR SETUP */
 
-const PROCESSING_STATS_API_URL = "http://localhost:8100/stats"
+const PROCESSING_STATS_API_URL = "http://imacdonald3855.centralus.cloudapp.azure.com:8100/stats"
 const ANALYZER_API_URL = {
-    stats: "http://localhost:8120/stats",
-    job: "http://localhost:8120/job?index=5",
-    odometer: "http://localhost:8120/odometer?index=5"
+    stats: "http://imacdonald3855.centralus.cloudapp.azure.com:8120/stats",
+    job: "http://imacdonald3855.centralus.cloudapp.azure.com:8120/job?index=5",
+    odometer: "http://imacdonald3855.centralus.cloudapp.azure.com:8120/odometer?index=5"
 }
 
 // This function fetches and updates the general statistics
