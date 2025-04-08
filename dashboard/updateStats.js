@@ -3,8 +3,8 @@
 const PROCESSING_STATS_API_URL = "http://localhost:8100/stats"
 const ANALYZER_API_URL = {
     stats: "http://localhost:8120/stats",
-    // snow: "http://imacdonald3855.centralus.cloudapp.azure.com/event.json",
-    // lift: "http://imacdonald3855.centralus.cloudapp.azure.com:8123/event.json"
+    snow: "http://localhost:8120/job",
+    lift: "http://localhost:8120/odometer"
 }
 
 // This function fetches and updates the general statistics
@@ -28,8 +28,8 @@ const getStats = () => {
     
     makeReq(PROCESSING_STATS_API_URL, (result) => updateCodeDiv(result, "processing-stats"))
     makeReq(ANALYZER_API_URL.stats, (result) => updateCodeDiv(result, "analyzer-stats"))
-    // makeReq(ANALYZER_API_URL.snow, (result) => updateCodeDiv(result, "event-snow"))
-    // makeReq(ANALYZER_API_URL.lift, (result) => updateCodeDiv(result, "event-lift"))
+    makeReq(ANALYZER_API_URL.snow, (result) => updateCodeDiv(result, "event-snow"))
+    makeReq(ANALYZER_API_URL.lift, (result) => updateCodeDiv(result, "event-lift"))
 }
 
 const updateErrorMessages = (message) => {
