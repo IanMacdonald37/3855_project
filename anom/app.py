@@ -22,9 +22,6 @@ def test_kafka():
         try:
             client = KafkaClient(hosts=f"kafka:29092")
             topic = client.topics[str.encode(CONFIG['kafka']['topic'])]
-            consumer = topic.get_simple_consumer(consumer_group=b'event_group',
-                reset_offset_on_start=False,
-                auto_offset_reset=OffsetType.LATEST)
             print("Connected to Kafka!")
             break  # Exit loop if connection is successful
         except Exception as e:
@@ -52,7 +49,7 @@ def update_anomalies():
                 anoms.append(
                     {
                         "trace_id": data["payload"]["trace_id"],
-                        "event_id": None,
+                        "event_id": "None",
                         "event_type": data["type"],
                         "anomaly_type": "too low",
                         "description": f"Detected: {data["payload"]["odometer"]}; too low (threshold 1000)"
@@ -64,7 +61,7 @@ def update_anomalies():
                 anoms.append(
                     {
                         "trace_id": data["payload"]["trace_id"],
-                        "event_id": None,
+                        "event_id": "None",
                         "event_type": data["type"],
                         "anomaly_type": "too high",
                         "description": f"Detected: {data["payload"]["bay_id"]}; too high (threshold 6)"
