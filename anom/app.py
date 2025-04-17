@@ -3,6 +3,7 @@ import yaml
 import logging
 import connexion
 import json
+from connexion import NoContent
 import time
 from pykafka import KafkaClient
 from pykafka.common import OffsetType
@@ -84,7 +85,7 @@ def get_anomalies(event_type=None):
             anoms = json.load(in_file)
         
         if len(anoms) == 0:
-            return 204
+            return NoContent, 204
 
         if event_type == None:
             logger.debug(f"returning {anoms}")
@@ -96,7 +97,7 @@ def get_anomalies(event_type=None):
                 filtered_anoms.append(anom)
 
         if len(filtered_anoms) == 0:
-            return 204
+            return NoContent, 204
         else:
             logger.debug(f"returning {filtered_anoms}")
             return filtered_anoms, 200
