@@ -49,7 +49,7 @@ def update_anomalies():
             if data["payload"]["odometer"] < CONFIG['min_odometer']:
                 anoms.append(
                     {
-                        "trace_id": data["payload"]["trace_id"],
+                        "trace_id": str(data["payload"]["trace_id"]),
                         "event_id": "None",
                         "event_type": data["type"],
                         "anomaly_type": "too low",
@@ -61,7 +61,7 @@ def update_anomalies():
             if data["payload"]["bay_id"] > CONFIG['max_bay_id']:
                 anoms.append(
                     {
-                        "trace_id": data["payload"]["trace_id"],
+                        "trace_id": str(data["payload"]["trace_id"]),
                         "event_id": "None",
                         "event_type": data["type"],
                         "anomaly_type": "too high",
