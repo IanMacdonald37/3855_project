@@ -1,0 +1,9 @@
+version: 1
+kafka:
+  hostname: "kafka"
+  port: "29092"
+  topic: "events"
+anoms_file: anoms.json
+log_file_name: anom.log
+max_bay_id: 6
+min_odometer: 1000

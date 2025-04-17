@@ -1,4 +1,16 @@
 services:
+  anomaly:
+    build:
+      context: .
+      dockerfile: anom/Dockerfile
+    volumes:
+      - ./config/prod:/config
+      - ./logs/anom.log:/app/anom.log
+      - ./data/anom/anoms.json:/app/anoms.json
+    depends_on:
+      - kafka
+    ports:
+      - "8140:8140"
   dashboard:
     build:
       context: .

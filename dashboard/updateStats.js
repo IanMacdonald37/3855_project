@@ -3,8 +3,8 @@
 const PROCESSING_STATS_API_URL = "http://imacdonald3855.centralus.cloudapp.azure.com:8100/stats"
 const ANALYZER_API_URL = {
     stats: "http://imacdonald3855.centralus.cloudapp.azure.com:8120/stats",
-    job: "http://imacdonald3855.centralus.cloudapp.azure.com:8120/job?index=5",
-    odometer: "http://imacdonald3855.centralus.cloudapp.azure.com:8120/odometer?index=5"
+    job: "http://imacdonald3855.centralus.cloudapp.azure.com:8120/job?index=1",
+    odometer: "http://imacdonald3855.centralus.cloudapp.azure.com:8120/odometer?index=1"
 }
 
 // This function fetches and updates the general statistics
